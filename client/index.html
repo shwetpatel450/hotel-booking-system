@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hotelApp">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BluePeak Hotel | Booking System</title>
+    <script>
+      if (!window.location.hash) {
+        window.location.replace(window.location.pathname + window.location.search + "#!/");
+      }
+    </script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body ng-controller="MainController as main" class="bg-light app-shell" ng-class="{'is-auth-page': main.isAuthPage}">
+    <nav class="navbar navbar-expand-lg navbar-dark hero-nav shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#!/">BluePeak Hotel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#!/">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!/rooms">Rooms</a></li>
+            <li class="nav-item"><a class="nav-link" href="#!/contact">Contact</a></li>
+            <li class="nav-item" ng-if="main.isAuthenticated()">
+              <a class="nav-link" href="#!/bookings">My Bookings</a>
+            </li>
+            <li class="nav-item" ng-if="main.currentUser.role === 'admin'">
+              <a class="nav-link" href="#!/admin">Admin</a>
+            </li>
+            <li class="nav-item" ng-if="!main.isAuthenticated()">
+              <a class="nav-link" href="#!/login">Login</a>
+            </li>
+            <li class="nav-item" ng-if="!main.isAuthenticated()">
+              <a class="nav-link btn btn-sm btn-gold px-3 text-dark mt-1 mt-lg-0" href="#!/register">Sign Up</a>
+            </li>
+            <li class="nav-item" ng-if="main.isAuthenticated()">
+              <button class="btn btn-sm btn-outline-light mt-1 mt-lg-0" ng-click="main.logout()">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <div ng-view></div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="d-flex flex-column flex-lg-row align-items-lg-center justify-content-between gap-3">
+          <div>
+            © {{ main.currentYear }} BluePeak Hotel. All rights reserved.
+            <div class="site-footer-meta mt-1">Safe stays for students, interns, and travelers.</div>
+          </div>
+          <div class="d-flex flex-wrap gap-3 align-items-center">
+            <a class="site-footer-link" href="#!/">Home</a>
+            <a class="site-footer-link" href="#!/rooms">Rooms</a>
+            <a class="site-footer-link" href="#!/contact">Contact</a>
+            <a class="site-footer-link" href="#!/bookings" ng-if="main.isAuthenticated()">My Bookings</a>
+            <a class="site-footer-link" href="#!/admin" ng-if="main.currentUser.role === 'admin'">Admin</a>
+            <span class="site-footer-link cursor-disabled">Support: 24×7</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular-route.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

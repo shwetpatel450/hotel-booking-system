@@ -1,0 +1,260 @@
+body {
+  font-family: Inter, "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(180deg, #eef3fa 0%, #f8fafc 50%, #ffffff 100%);
+  color: #1f2937;
+}
+
+.hero-nav {
+  background: linear-gradient(100deg, #0b2447, #19376d);
+}
+
+.hero {
+  border: 0;
+  border-radius: 20px;
+  color: #fff;
+  background:
+    linear-gradient(125deg, rgba(10, 25, 47, 0.9), rgba(25, 55, 109, 0.82)),
+    url("https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1600&q=80")
+      center / cover no-repeat;
+  box-shadow: 0 16px 40px rgba(11, 36, 71, 0.25);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.text-soft {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.ui-card,
+.room-card {
+  border: 0;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.08);
+}
+
+.hero-glass {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.room-image {
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.navbar .btn-warning,
+.btn-warning {
+  color: #111827;
+  font-weight: 600;
+}
+
+.btn-gold,
+.navbar .btn-gold {
+  background: #f59e0b;
+  border: 1px solid #d97706;
+  color: #111827;
+  font-weight: 700;
+}
+
+.btn-gold:hover,
+.navbar .btn-gold:hover {
+  background: #eab308;
+  border-color: #c2410c;
+  color: #111827;
+}
+
+.btn-gold:focus,
+.navbar .btn-gold:focus {
+  box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.35);
+}
+
+.feature-chip {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  font-size: 0.92rem;
+  color: #1f2937;
+}
+
+.promo-box {
+  border-radius: 14px;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef4ff 100%);
+  border: 1px solid #dbeafe;
+}
+
+.stat-card {
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.05);
+}
+
+.stat-card p {
+  color: #64748b;
+}
+
+.preview-card {
+  overflow: hidden;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  background: #fff;
+}
+
+.preview-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.preview-body {
+  padding: 0.85rem;
+}
+
+.quote-card {
+  height: 100%;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  padding: 0.95rem;
+  color: #334155;
+  font-size: 0.93rem;
+}
+
+.quote-card span {
+  display: block;
+  margin-top: 0.45rem;
+  color: #475569;
+  font-weight: 600;
+}
+
+.admin-stat {
+  background: linear-gradient(180deg, #ffffff 0%, #f3f8ff 100%);
+}
+
+.admin-stat p {
+  color: #64748b;
+}
+
+.admin-panel {
+  border: 1px solid #e2e8f0;
+}
+
+/* Auth pages */
+.auth-page {
+  min-height: 60vh;
+  align-items: center;
+}
+
+.auth-card {
+  border-radius: 18px;
+  border: 1px solid rgba(2, 6, 23, 0.08);
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.10);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.auth-input {
+  border-radius: 12px !important;
+  border: 1px solid rgba(15, 23, 42, 0.18) !important;
+}
+
+.auth-input:focus {
+  border-color: rgba(245, 158, 11, 0.65) !important;
+  box-shadow: 0 0 0 0.25rem rgba(245, 158, 11, 0.22) !important;
+}
+
+.auth-btn {
+  border-radius: 12px !important;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  letter-spacing: 0.2px;
+  font-weight: 700;
+}
+
+.auth-link {
+  text-decoration: none;
+  color: #f59e0b;
+  font-weight: 700;
+}
+
+.auth-link:hover {
+  text-decoration: underline;
+}
+
+/* Site footer (shown on all pages except login/register) */
+.site-footer {
+  margin-top: auto;
+  padding: 20px 0;
+  background: linear-gradient(100deg, #0b2447, #19376d);
+  color: rgba(255, 255, 255, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 -8px 24px rgba(11, 36, 71, 0.2);
+}
+
+.site-footer-link {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.site-footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.cursor-disabled {
+  opacity: 0.9;
+  cursor: default;
+}
+
+/* Keep footer visible on all non-auth pages */
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-shell main {
+  flex: 1 0 auto;
+}
+
+.site-footer-meta {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.9rem;
+}
+
+.is-auth-page .site-footer {
+  display: none;
+}
+
+/* Contact page */
+.contact-info-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.contact-info-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  background: #f8fafc;
+}
+
+.contact-info-item p {
+  color: #334155;
+}
+
+.contact-form-wrap {
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
